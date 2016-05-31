@@ -1,3 +1,4 @@
-app.controller('SearchController', ['$scope', 'restangular','SearchService', function ($scope, restangular, SearchService) {
-    $scope.name = 'Brian';
+angular.module('meteoApp')
+    .controller('SearchCtrl', ['restangular','SearchService', function (Restangular, SearchService) {
+        this.cityes = '';
 }]);

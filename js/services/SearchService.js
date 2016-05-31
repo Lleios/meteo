@@ -1,3 +1,4 @@
-app.factory('SearchService', function(Restangular) {
-  return Restangular.
+angular.module('meteoApp')
+    .factory('SearchService', function(Restangular) {
+        Restangular.get();
 });
