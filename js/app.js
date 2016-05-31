@@ -5,5 +5,6 @@ angular.module('meteoApp', ['ui.router', 'restangular'])
     $stateProvider
       .state('meteo', {
         url: '/meteo',
-        template: '<div ui-view></div>',
+        template: '  <input ng-model="ville"></input> <button type="button">Rechercher</button> <div ui-view></div>',
       });
+    });
