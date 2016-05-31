@@ -12,7 +12,12 @@ app.config(function($stateProvider, $urlRouterProvider, RestangularProvider) {
       })
       .state('meteo.ville', {
         url: '/ville/:ville',
-        template: '{{villes}}<div ui-view></div>',
-        controller: "meteoController"
+        resolve:{
+          villes:function(Restangular, $stateParams){
+            return Restangular.one('weather?q='+$stateParams.ville).get();
+          }
+        },
+        controller: "meteoController",
+        template: 'ok {{villes}}<div ui-view></div>',
       });
   });
