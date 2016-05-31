@@ -14,10 +14,10 @@ app.config(function($stateProvider, $urlRouterProvider, RestangularProvider) {
         url: '/ville/:ville',
         resolve:{
           villes:function(Restangular, $stateParams){
-            return Restangular.one('weather?q='+$stateParams.ville).get();
+            return Restangular.one('weather?q='+$stateParams.ville+'&units=metric').get();
           }
         },
         controller: "meteoController",
-        template: 'ok {{villes}}<div ui-view></div>',
+        template: '<img src="{{icon}}"/>{{villes}}, {{country}} <br>{{temp}}°C<div ui-view></div>',
       });
   });
