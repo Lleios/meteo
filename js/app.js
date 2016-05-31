@@ -26,5 +26,5 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 app.config(function(RestangularProvider) {
     RestangularProvider.setBaseUrl('api.openweathermap.org/data/2.5');
-    RestangularProvider.setRequestSuffix('&APPID={dd8165909b16aafb5e4a2c7a176b6af}');
+    RestangularProvider.setRequestSuffix('&APPID={dd81659090b16aafb5e4a2c7a176b6af}');
 });
